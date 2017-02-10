@@ -3,9 +3,13 @@
      <title>To-Do lists</title>
     </head>
     <body>
+    <form method="POST">
     	<h1>Your To-Do lists</h1>
     	<input name="item_text" id="id_new_item" placeholder="Enter a To-Do item" />
+    	{% csrf_token %}
+    </form>
     	<table id="id_list_table">
+    	<tr><td> {{ new_item_text }} </td></tr> 
     	<table>
     </body>
 </html>
