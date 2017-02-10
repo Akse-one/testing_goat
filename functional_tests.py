@@ -33,7 +33,8 @@ class NewVisitorTest(unittest.TestCase):
         table = self.browser.find_element_by_id('id_list_table')
         rows = table.find_elements_by_tag_name('tr')
         self.assertTrue(
-            any(row.text == '1: Finish the obey_goat book' for row in rows)
+            any(row.text == '1: Finish the obey_goat book' for row in rows),
+            "New To-Do Item did not appear in table"
         )
 #There is still a text box inviting user to add another to-do item
         self.fail('Finish the test!')
